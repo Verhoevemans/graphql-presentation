@@ -1,0 +1,64 @@
+<div class="navigation">
+  <p (click)="activePage = 1" [class.selected]="activePage === 1">
+    What we didn't cover
+  </p>
+  <p (click)="activePage = 2" [class.selected]="activePage === 2">
+    Experience
+  </p>
+  <p (click)="activePage = 3" [class.selected]="activePage === 3">
+    Further Reading
+  </p>
+  <p class="empty-footer"></p>
+</div>
+<div class="content">
+  <div *ngIf="activePage === 1">
+    <h2>
+      GraphQL offers many more advanced ways for <span class="graph-pink">querying data</span>
+    </h2>
+    <br><br><br><br>
+    <h4 (click)="notCovered = 1">
+      <img src="../../../assets/img/grapql-icon.png" class="icon">
+      No duplicate code when using <span class="pointer">Fragments</span>
+    </h4>
+    <br>
+    <h4 (click)="notCovered = 2">
+      <img src="../../../assets/img/grapql-icon.png" class="icon">
+      More options for inserting data when using <span class="pointer">Variables</span>
+    </h4>
+    <br>
+    <h4>
+      <img src="../../../assets/img/grapql-icon.png" class="icon">
+      <span class="pointer"> Subscriptions</span> to get updates on data changed from the Server
+    </h4>
+    <br><br>
+    <div (click)="notCovered = null">
+      <img *ngIf="notCovered === 1" src="../../../assets/img/fragments.png" class="centered">
+      <img *ngIf="notCovered === 2" src="../../../assets/img/variables.png" class="centered">
+    </div>
+  </div>
+  <div *ngIf="activePage === 2">
+    <h2>
+      Personal <span class="graph-pink">Experiences</span> from working with GraphQL
+    </h2>
+  </div>
+  <div *ngIf="activePage === 3">
+    <h2>
+      Awesome <span class="graph-pink">Documentations</span> available online
+    </h2>
+    <br><br><br><br>
+    <h4>
+      <img src="../../../assets/img/grapql-icon.png" class="icon">
+      Learning the concepts: <span class="graph-pink">https://graphql.org/learn/</span>
+    </h4>
+    <br>
+    <h4>
+      <img src="../../../assets/img/grapql-icon.png" class="icon">
+      How to Graph: <span class="graph-pink">https://www.howtographql.com/</span>
+    </h4>
+    <br>
+    <h4>
+      <img src="../../../assets/img/grapql-icon.png" class="icon">
+      GraphQL for Java: <span class="graph-pink">https://www.graphql-java.com/</span>
+    </h4>
+  </div>
+</div>

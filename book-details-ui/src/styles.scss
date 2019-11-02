@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rubik', 'Helvetica Neue';
+}
+
+.graph-pink {
+  color: #e10098;
+}
+
+img.icon {
+  height: .8em;
+}
+
+.navigation {
+  height: 100%;
+  width: 20%;
+  border-right: 1px solid #bdbdbd;
+  margin-right: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+
+  .selected {
+    font-weight: bold;
+  }
+
+  .empty-footer {
+    height: 50%;
+  }
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pointer {
+  color: #e10098;
+  cursor: pointer;
+}

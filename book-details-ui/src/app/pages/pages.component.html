@@ -1,0 +1,18 @@
+<header>
+  <ul class="navbar-nav">
+    <li><a routerLink=""><img src="../../assets/img/graphql-logo.png"></a></li>
+    <li><a routerLink="introduction" routerLinkActive="active-tab">Introduction</a></li>
+    <li><a routerLink="core-concepts" routerLinkActive="active-tab">Core Concepts</a></li>
+    <li><a routerLink="conclusion" routerLinkActive="active-tab">Conclusions</a></li>
+  </ul>
+  <hr>
+</header>
+<main>
+  <div *ngIf="activeRoute === '/graphql'" class="welcome">
+    <h1 routerLink="introduction">Welcome to <span class="graph-pink">GraphQL</span></h1>
+  </div>
+  <div *ngIf="activeRoute !== '/graphql'">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<footer></footer>

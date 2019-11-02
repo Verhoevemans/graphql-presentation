@@ -1,0 +1,71 @@
+<div class="navigation">
+  <p (click)="activePage = 1" [class.selected]="activePage === 1">What is GraphQL</p>
+  <p (click)="activePage = 2" [class.selected]="activePage === 2">GraphQL versus REST</p>
+  <p (click)="activePage = 3" [class.selected]="activePage === 3">GraphQL Architecture</p>
+  <p class="empty-footer"></p>
+</div>
+<div class="content">
+  <div *ngIf="activePage === 1">
+    <h2>GraphQL is a <span class="graph-pink">query language</span> for API's</h2>
+    <br><br><br><br>
+    <h4>
+      <img src="../../../assets/img/grapql-icon.png" class="icon">
+      Provides a complete and understandible description of the data in your API
+    </h4>
+    <br>
+    <h4>
+      <img src="../../../assets/img/grapql-icon.png" class="icon">
+      Gives clients the power to ask for exactly what they need, and nothing more
+    </h4>
+    <br>
+    <h4>
+      <img src="../../../assets/img/grapql-icon.png" class="icon">
+      Makes it easier to use and evolve API's over time
+    </h4>
+    <br><br><br><br>
+    <h4 class="quote">
+      <i>"GraphQL enables declarative data fetching where a client can specify exactly what it needs
+        from an API, and the server only exposes a single endpoint"</i>
+    </h4>
+  </div>
+  <div *ngIf="activePage === 2">
+    <h2>Differences between GraphQL and <span class="graph-pink">REST</span></h2>
+    <br><br><br><br>
+    <h4>
+      <img src="../../../assets/img/grapql-icon.png" class="icon">
+      A REST setup often tries to offer an API that fits the requirements of all subscribing clients
+      (<span class="graph-pink">overfetching</span> and <span class="graph-pink">underfetching</span>)
+    </h4>
+    <br><br>
+    <h2>
+      <span class="pointer" (click)="previousScenario()"><b> < </b></span>
+      scenario:
+      <span class="pointer" (click)="nextScenario()"><b> > </b></span>
+    </h2>
+    <div *ngIf="scenarioNumber !== null" class="scenario">
+      <img src="{{getImgSource()}}">
+    </div>
+  </div>
+  <div *ngIf="activePage === 3">
+    <h2>The GraphQL <span class="graph-pink">architecture</span> demonstrates the flexibility of its use</h2>
+    <br><br><br><br>
+    <h4>
+      <img src="../../../assets/img/grapql-icon.png" class="icon">
+      GrapQL can have a
+      <span class="pointer" (click)="architecture = 1">Connected Database</span>
+      , integrate with an
+      <span class="pointer" (click)="architecture = 2">Existing System</span>
+      or offer an
+      <span class="pointer" (click)="architecture = 3">Hybrid approach</span>
+    </h4>
+    <br><br>
+    <div *ngIf="architecture" class="scenario">
+      <img src="{{getArchitectureImgSource()}}" (click)="architecture = null">
+    </div>
+    <br><br>
+    <h4>
+      <img src="../../../assets/img/grapql-icon.png" class="icon">
+      Many client-side or server-side <span class="graph-pink">Libraries</span> exist to integrate GraphQL in your project
+    </h4>
+  </div>
+</div>

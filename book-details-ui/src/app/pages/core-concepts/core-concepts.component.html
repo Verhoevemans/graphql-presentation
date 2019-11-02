@@ -1,0 +1,53 @@
+<div class="navigation">
+  <p (click)="activePage = 1" [class.selected]="activePage === 1">
+    Schema Definition Language
+  </p>
+  <p (click)="activePage = 2" [class.selected]="activePage === 2">
+    Data Queries
+  </p>
+  <p (click)="activePage = 3" [class.selected]="activePage === 3">
+    Data Mutations
+  </p>
+  <p class="empty-footer"></p>
+</div>
+<div class="content">
+  <div *ngIf="activePage === 1">
+    <h2>
+      Schema Definition Language (<span class="graph-pink">SDL</span>)
+    </h2>
+    <br><br><br>
+    <h4>
+      <img src="../../../assets/img/grapql-icon.png" class="icon">
+      The Schema Definition Language defines the schema of the API, and is the contract between the client and the server.
+    </h4>
+    <br><br>
+    <img class="centered" src="../../../assets/img/server-graph.png">
+  </div>
+  <div *ngIf="activePage === 2">
+    <h2>Data Queries</h2>
+    <br><br>
+    <app-playground [initialQuery]="query"></app-playground>
+    <br><br><br><br>
+    <div class="scenarios">
+      <p (click)="setQueryScenario(1)"><u>scenario 1</u></p>
+      <p (click)="setQueryScenario(2)"><u>scenario 2</u></p>
+      <p (click)="setQueryScenario(3)"><u>scenario 3</u></p>
+    </div>
+  </div>
+  <div *ngIf="activePage === 3">
+    <h2>
+      Data Mutations
+    </h2>
+    <br><br>
+    <app-playground [initialQuery]="mutation"></app-playground>
+    <br><br><br><br>
+    <div class="scenarios">
+      <p (click)="setMutationScenario(1)">
+        <u>createAuthor()</u>
+      </p>
+      <p (click)="setMutationScenario(2)">
+        <u>getAuthors()</u>
+      </p>
+    </div>
+  </div>
+</div>

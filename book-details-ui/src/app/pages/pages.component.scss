@@ -1,0 +1,57 @@
+:host {
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 100%;
+
+  header {
+    height: 10%;
+
+    hr {
+      width: 100%;
+      position: absolute;
+      right: 0;
+      margin-top: 0;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      a {
+        color: #bdbdbd;
+        padding-right: 5em;
+      }
+
+      img {
+        height: 3em;
+      }
+
+      .active-tab {
+        color: black;
+      }
+    }
+  }
+
+  main {
+    height: 90%;
+
+    div {
+      height: 100%;
+    }
+
+    .welcome {
+      display: flex;
+      padding-bottom: 10em;
+      justify-content: center;
+      align-items: center;
+
+
+      :hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

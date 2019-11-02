@@ -1,0 +1,15 @@
+<div class="input">
+  <textarea rows="12"
+            (keydown.Tab)="onTab($event); false"
+            [(ngModel)]="initialQuery">
+  </textarea>
+  <button (click)="sendRequest()" class="btn btn-block btn-primary">
+    Send Request
+  </button>
+</div>
+
+<div class="output">
+  <pre>
+     {{ graphQLResponse | json }}
+  </pre>
+</div>
